@@ -6,7 +6,7 @@
             <div class="card">
 
                 <div class="card-header">
-                    <strong>Credit Card</strong>
+                    <strong>Campaign URL Builder</strong>
                 </div>
 
                 <div class="card-block">
@@ -16,7 +16,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="source">Source</label>
-                                <input type="text" class="form-control" id="source" placeholder="Enter Campaign Source">
+                                <input type="text" class="form-control" id="txtSource" placeholder="Enter Campaign Source">
                             </div>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="medium">Medium</label>
-                                <input type="text" class="form-control" id="medium" placeholder="Enter your Medium">
+                                <input type="text" class="form-control" id="txtMedium" placeholder="Enter your Medium">
                             </div>
                         </div>
                     </div>
@@ -36,7 +36,7 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="campaignname">Campaign Name</label>
-                                <input type="text" class="form-control" id="campaignname" placeholder="Enter your Campaign Name">
+                                <input type="text" class="form-control" id="txtCampaignName" placeholder="Enter your Campaign Name">
                             </div>
                         </div>
                     </div>
@@ -46,18 +46,16 @@
                         <div class="col-sm-12">
                             <div class="form-group">
                                 <label for="landingurl">Landing URL</label>
-                                <input type="text" class="form-control" id="landingurl" placeholder="Enter your Landing URL">
+                                <input type="text" class="form-control" id="txtLandingUrl" placeholder="Enter your Landing URL">
                             </div>
                         </div>
                     </div>
                     <!--/.row-->
 
-
-
                 </div>
 
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                    <button type="submit" class="btn btn-sm btn-primary" id="btnMakeUrl" (click)="btnMake_Click()" ><i class="fa fa-dot-circle-o"></i> Make</button>
                 </div>
 
             </div>
@@ -82,7 +80,7 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="genurl" >
+                                <input type="text" class="form-control" id="txtResult" >
                             </div>
                         </div>
                     </div>
