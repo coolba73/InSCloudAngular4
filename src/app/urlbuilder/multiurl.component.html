@@ -1,0 +1,69 @@
+<div class="animated fadeIn">
+    <div class="row">
+        <div class="col-sm-8">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <strong>Source</strong>
+                </div>
+
+                <div class="card-block">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <!--<label for="source">Source</label>-->
+                                <textarea id="txtSource" name="txtSource" rows="9" class="form-control" placeholder="Content.."></textarea>
+                                <span class="help-block">Order : Campaign Source Medium Name Website URL </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-primary" id="btnMakeUrl" (click)="btnMake_Click()" ><i class="fa fa-dot-circle-o"></i> Make</button>
+                </div>
+
+            </div>
+        </div>
+        <!--/.col-->
+
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <strong>Result</strong>
+                </div>
+
+                <div class="card-block">
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group">
+                                <!--<label for="source">Source</label>-->
+                                <textarea id="txtResult" name="txtResult" rows="9" class="form-control" placeholder="Content.."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/.row-->
+
+                </div>
+
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-sm btn-success" id="btnCopy" (click)="btnCopy_Click()"   ><i class="fa fa-dot-circle-o"></i> Copy</button>
+                </div>
+
+            </div>
+        </div>
+        <!--/.col-->
+
+    </div>
+
+</div>

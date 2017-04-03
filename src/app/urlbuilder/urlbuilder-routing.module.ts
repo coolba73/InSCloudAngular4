@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { SingleurlComponent } from './singleurl.component';
+import { MultiUrlComponent } from './multiurl.component';
 
 const routes: Routes = [
   {
@@ -16,7 +17,15 @@ const routes: Routes = [
         data: {
           title: 'Single URL'
         }
+      },
+      {
+        path: 'multiurl',
+        component: MultiUrlComponent,
+        data: {
+          title: 'Multi URL'
+        }
       }
+
       
     ]
   }
