@@ -8,8 +8,9 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 export const routes: Routes = [
   {
     path: '',
-     redirectTo: 'dashboard',
-    // redirectTo: 'pages/title',
+    //  redirectTo: 'dashboard',
+    redirectTo: 'main/main',
+    // redirectTo:'pages/title',
     pathMatch: 'full',
   },
   {
@@ -42,6 +43,10 @@ export const routes: Routes = [
       {
         path: 'urlbuilder',
         loadChildren: './urlbuilder/urlbuilder.module#URLBuilderModule'
+      },
+      {
+        path: 'main',
+        loadChildren: './main/main.module#MainModule'
       }
     ]
   },
