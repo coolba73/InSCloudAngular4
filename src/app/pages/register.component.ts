@@ -19,9 +19,9 @@ export class RegisterComponent {
     alert( this._userService.registerUser(this.username, this.email, this.password) );
 
 
-    this.username = "";
-    this.email = "";
-    this.password = "";
+    // this.username = "";
+    // this.email = "";
+    // this.password = "";
 
 
     // alert( 
