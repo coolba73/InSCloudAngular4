@@ -19,6 +19,7 @@ export class UserService{
         email_id = email.split('@')[0];
 
         var reqUrl:string = `http://localhost:62988/api/Users`;
+        
         var params : string = `UserName=${username}&EMailDomain=${email_domain}&EMailID=${email_id}&Password=${password}`;
 
         var headers = new Headers();
@@ -26,7 +27,6 @@ export class UserService{
 
         let options = new RequestOptions({headers:headers});
         
-
         // this.http.post(reqUrl +'?'+ params,undefined ,options).subscribe(
         //     error => console.log('Error'),
         //     () => console.log("Servie Complete")
@@ -36,9 +36,6 @@ export class UserService{
             error => console.log('Error'),
             () => console.log("Servie Complete")
         );
-
-        
-        
 
         return '';
 
