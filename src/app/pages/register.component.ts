@@ -16,8 +16,7 @@ export class RegisterComponent {
 
   public btnCreateAccount_Click()
   {
-    alert( this._userService.registerUser(this.username, this.email, this.password) );
-
+    this._userService.registerUser(this.username, this.email, this.password);
 
     // this.username = "";
     // this.email = "";
