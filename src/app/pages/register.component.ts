@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from "../../Services/user.servicie";
+import { UserService } from "../../Services/user.service";
+import { Router } from "@angular/router";
 
 @Component({
   templateUrl: 'register.component.html',
@@ -11,26 +12,31 @@ export class RegisterComponent {
   password : string;
   email : string;
 
-  constructor(private _userService:UserService) { }
+  constructor(
+    private _userService:UserService,
+    private _router : Router
+  ) { }
 
 
   public btnCreateAccount_Click()
   {
-    this._userService.registerUser(this.username, this.email, this.password);
+    
+    //  let regRe = this._userService.registerUser(this.username, this.email, this.password);
 
-    // this.username = "";
-    // this.email = "";
-    // this.password = "";
+    //  if (regRe)
+    //  {
+    //     this._router.navigate(['/pages/login'])
+    //  }
 
-
-    // alert( 
-    //       `
-    //       username : ${this.username}  
-    //       email    : ${this.email}  
-    //       password : ${this.password}
-    //       ` 
-    // );
-
+    this._userService.createUser(this.username, this.email, this.password).subscribe(
+      data => 
+      {
+        this._router.navigate(['/pages/login'])
+      },
+      error => {
+          alert('error');
+      }
+    );
 
   }
 
