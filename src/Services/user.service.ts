@@ -7,6 +7,8 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class UserService{
 
+    url = 'http://localhost:62988/api/User2';
+
     constructor(private http : Http){}
 
 
@@ -137,7 +139,7 @@ export class UserService{
         email_domain = email.split('@')[1];
         email_id = email.split('@')[0];
 
-        let url = 'http://localhost:62988/api/User2';
+        // let url = 'http://localhost:62988/api/User2';
         
         let body = JSON.stringify({
             UserName : username,
@@ -148,14 +150,44 @@ export class UserService{
 
         // let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
         let headers = new Headers({ 'Content-Type': 'application/json' });
-        let options = new RequestOptions({ headers: headers, method: "post" });
-
-        return this.http.post(url, body, options).map(res=>res.json());
+        // let options = new RequestOptions({ headers: headers, method: "post" });
+        let options = new RequestOptions({ headers: headers });
+        return this.http.post(this.url, body, options).map(res=>res.json());
 
     }
 
+    /*
+    ############################################################################################################################
     
+    LogIn
+    
+    ############################################################################################################################
+    */
+    LogIn(Email,Password){
 
+        let email_domain:string;
+        let email_id : string;
+
+        email_domain = Email.split('@')[1];
+        email_id = Email.split('@')[0];
+
+        let body = new URLSearchParams();
+        body.append("EmailID",email_id);
+        body.append("EmailDomain",email_domain);
+        body.append("Password",Password);
+
+
+        let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        let options = new RequestOptions({ search : body});
+
+        return this.http.get(this.url, {search:body.toString()}).map( (res:Response)=>
+            {
+                //console.log(res.json());
+                return res.json();
+            }
+        );
+        
+    }
 
 
 
