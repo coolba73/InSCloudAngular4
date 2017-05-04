@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Http, RequestOptions, Headers, Response } from "@angular/http";
-import 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import { Observable } from "rxjs/Observable";
@@ -122,5 +121,43 @@ export class UserService{
         return this.http.post(reqUrl, body.toString(), options).map((response:Response)=> response.json());
 
     }
+
+    /*
+    ############################################################################################################################
+
+    AddUser
+    
+    ############################################################################################################################
+     */
+    AddUser(username:string, email:string, password:string){
+
+        let email_domain:string;
+        let email_id : string;
+
+        email_domain = email.split('@')[1];
+        email_id = email.split('@')[0];
+
+        let url = 'http://localhost:62988/api/User2';
+        
+        let body = JSON.stringify({
+            UserName : username,
+            EMailDomain : email_domain,
+            EMailID : email_id,
+            Password : password,
+        });
+
+        // let headers = new Headers({ 'Content-Type': 'application/x-www-form-urlencoded' });
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers, method: "post" });
+
+        return this.http.post(url, body, options).map(res=>res.json());
+
+    }
+
+    
+
+
+
+
 
 }//class
