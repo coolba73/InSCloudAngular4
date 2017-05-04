@@ -20,7 +20,12 @@ export class LoginComponent {
     this._userSvc.LogIn(this.Email, this.Password).subscribe(
       data => {
         console.log(data.value);
-        console.log(data.value.eMailDomain);
+        
+        console.log( "EMail Domain : " + data.value.eMailDomain);
+        console.log( "EMail ID : " + data.value.eMailID);
+        console.log( "User Name : " + data.value.userName);
+        console.log( "User ID : " + data.value.userId);
+
       }
       ,error => console.log( "Error : " + error)
     );
