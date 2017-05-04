@@ -9,6 +9,10 @@ export class UserService{
 
     url = 'http://localhost:62988/api/User2';
 
+
+    static UserID;
+    static UserName;
+
     constructor(private http : Http){}
 
 

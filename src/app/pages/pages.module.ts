@@ -9,10 +9,12 @@ import { RegisterComponent } from './register.component';
 import {TitleComponent} from './title.component';
 
 import { PagesRoutingModule } from './pages-routing.module';
+import { CommonModule } from "@angular/common";
+
 
 
 @NgModule({
-  imports: [ PagesRoutingModule, FormsModule,HttpModule ],
+  imports: [ PagesRoutingModule, FormsModule,HttpModule, CommonModule ],
   declarations: [
     P404Component,
     P500Component,

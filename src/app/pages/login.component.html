@@ -16,14 +16,17 @@
                 <span class="input-group-addon"><i class="icon-lock"></i></span>
                 <input type="password" class="form-control" placeholder="Password" [(ngModel)]="Password">
               </div>
-
+              
+                <p  style="color: red" *ngIf="!UserCheck"   > * 등록된 사용자가 아니거나 암호가 일치하지 않습니다.</p>
+              
               <div class="row">
                 <div class="col-6">
                   <button type="button" class="btn btn-primary px-2" (click)="btnLogin_Click()">Login</button>
                 </div>
-                <div class="col-6 text-right">
+                
+                <!--<div class="col-6 text-right">
                   <button type="button" class="btn btn-link px-0">Forgot password?</button>
-                </div>
+                </div>-->
               </div>
             </div>
           </div>
@@ -31,7 +34,8 @@
             <div class="card-block text-center">
               <div>
                 <h2>Sign up</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+                <P> </P>
                 <button type="button" class="btn btn-primary active mt-1">Register Now!</button>
               </div>
             </div>
