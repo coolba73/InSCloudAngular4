@@ -28,7 +28,7 @@ export class RegisterComponent {
     //     this._router.navigate(['/pages/login'])
     //  }
 
-    this._userService.createUser(this.username, this.email, this.password).subscribe(
+    this._userService.AddUser(this.username, this.email, this.password).subscribe(
       data => 
       {
         this._router.navigate(['/pages/login'])
