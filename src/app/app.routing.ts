@@ -47,6 +47,10 @@ export const routes: Routes = [
       {
         path: 'main',
         loadChildren: './main/main.module#MainModule'
+      },
+      {
+        path:'test',
+        loadChildren:'./test/test.module#TestModule'
       }
     ]
   },
