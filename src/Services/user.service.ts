@@ -7,7 +7,8 @@ import { Observable } from "rxjs/Observable";
 @Injectable()
 export class UserService{
 
-    url = 'http://localhost:62988/api/User2';
+    // url = 'http://localhost:62988/api/User2';
+    url = 'http://collypagewebapi.azurewebsites.net/api/User2'
 
 
     static UserID;

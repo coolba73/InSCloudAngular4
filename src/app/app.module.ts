@@ -19,13 +19,20 @@ import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import 'hammerjs';
+
+
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
     DropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    BrowserAnimationsModule
   ],
   declarations: [
     AppComponent,
