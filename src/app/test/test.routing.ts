@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes , RouterModule } from "@angular/router";
 
 import { ModalTestComponent } from "./modaltest.component";
+import { DxTestComponent } from "./dxtest.component";
 
 const routes:Routes= [
     {
@@ -14,7 +15,14 @@ const routes:Routes= [
                 path : 'modaltest',
                 component : ModalTestComponent,
                 data : {
-                    title : 'Modate Test'
+                    title : 'Material Test'
+                }
+            },
+            {
+                path : 'dxtest',
+                component : DxTestComponent,
+                data : {
+                    title : 'Dx Test'
                 }
             }
         ]

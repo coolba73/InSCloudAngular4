@@ -4,7 +4,18 @@ import { TestRoutingModule } from "./test.routing";
 import { ModalModule } from 'ng2-bootstrap/modal';
 import { BootstrapModalModule } from "ng2-bootstrap-modal";
 import { ConfirmComponent } from "../MyComponent/Modal/confirm.component";
-import { MdTabsModule, MdCommonModule, MdInputModule, MdDatepickerModule, MdNativeDateModule } from "@angular/material";
+import { DxTestComponent } from "./dxtest.component";
+import { DevExtremeModule } from "devextreme-angular";
+
+import { 
+    MdTabsModule, 
+    MdCommonModule, 
+    MdInputModule, 
+    MdDatepickerModule, 
+    MdNativeDateModule, 
+    MdTooltipModule,
+    MdSidenavModule
+} from "@angular/material";
 
 @NgModule({
     imports : [
@@ -15,10 +26,14 @@ import { MdTabsModule, MdCommonModule, MdInputModule, MdDatepickerModule, MdNati
         ,MdInputModule
         ,MdDatepickerModule
         ,MdNativeDateModule
+        ,MdTooltipModule
+        ,MdSidenavModule
+        ,DevExtremeModule
         ],
     declarations:[
         ModalTestComponent
         ,ConfirmComponent
+        ,DxTestComponent
     ],
     entryComponents:[
         ConfirmComponent
