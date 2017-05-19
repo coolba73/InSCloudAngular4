@@ -16,7 +16,10 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "scss/style.scss"
+        "scss/style.scss",
+        "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+        "../node_modules/devextreme/dist/css/dx.common.css",
+        "../node_modules/devextreme/dist/css/dx.light.css"
       ],
       "scripts": [
         "../node_modules/chart.js/dist/Chart.bundle.min.js",
