@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, Input } from "@angular/core";
 import { ModalTestComponent } from "./modaltest.component";
 import { TestRoutingModule } from "./test.routing";
 import { ModalModule } from 'ng2-bootstrap/modal';
@@ -6,6 +6,9 @@ import { BootstrapModalModule } from "ng2-bootstrap-modal";
 import { ConfirmComponent } from "../MyComponent/Modal/confirm.component";
 import { DxTestComponent } from "./dxtest.component";
 import { DevExtremeModule } from "devextreme-angular";
+import { CvsTestComponent } from "./cvstest.component";
+import { InSCanvasComponent } from "../../_inscore/component/inscanvas.component";
+
 
 import { 
     MdTabsModule, 
@@ -29,11 +32,14 @@ import {
         ,MdTooltipModule
         ,MdSidenavModule
         ,DevExtremeModule
+        
         ],
     declarations:[
         ModalTestComponent
         ,ConfirmComponent
         ,DxTestComponent
+        ,CvsTestComponent
+        ,InSCanvasComponent
     ],
     entryComponents:[
         ConfirmComponent
