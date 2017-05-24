@@ -8,6 +8,4 @@ class BoxBase {
     yesSelect: boolean;
     yesMouseOver: boolean;
 
-    
-
 }
