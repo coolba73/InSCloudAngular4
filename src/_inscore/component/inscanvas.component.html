@@ -1,6 +1,12 @@
-<canvas 
-        id="myCanvas" 
-        style="background-color:white; border:1px solid #A9A9A9; "
-        #myCanvas
->
-</canvas>
+<div>
+        <button (click)="click()">text</button>
+        
+        
+</div>
+<div style="overflow:auto;" [style.height.px]='Height' [style.width.px]='Width'>
+        <canvas #myCanvas 
+                [attr.height]='canvasHeight' 
+                [attr.width]='canvasWidth' 
+                style="background:#eeeeee">
+        </canvas>
+</div>

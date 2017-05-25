@@ -3,52 +3,60 @@ import { Component, Input, ViewChild, ElementRef , AfterViewInit , ViewEncapsula
 @Component({
     selector : 'ins-canvas',
     templateUrl : './inscanvas.component.html',
+    styles : [`
+     ccsp-area {
+        overflow: scroll;
+    }
+    `],
     encapsulation: ViewEncapsulation.None
 })
 export class InSCanvasComponent implements AfterViewInit{
 
-    // @Input() Height : number;
+    @Input() Height : number;
+    Width : number = 10 ;
+
+    canvasHeight : number=1000;
+    canvasWidth : number=1000;
 
     @ViewChild("myCanvas") myCanvas: ElementRef;
 
+    el:ElementRef;
+
 
     ctx: CanvasRenderingContext2D;
+    cvs;
 
-    constructor(){
-        this.Height = 50;
+    constructor(el:ElementRef){
+        this.el = el;
     }
 
     ngAfterViewInit(){
-        let cvs = this.myCanvas.nativeElement;
-        this.ctx = cvs.getContext("2d");
-        this.Height = this.Height;
+
+        this.cvs = this.myCanvas.nativeElement;
+        this.ctx = this.cvs.getContext("2d");
+        
+        this.Width = this.el.nativeElement.parentElement.clientWidth;
+
         this.Draw();
-    }
 
-    @Input() set Height(newHeight:number){
-        //this.cvs.Height = newHeight;
-        let cvs = this.myCanvas.nativeElement;
-
-        // myCanvas.Height = newHeight;
-        // cvs.Height = newHeight;
-        console.log(newHeight);
+        // console.log(this.el.nativeElement.parentElement);
+        // console.log(this.el.nativeElement.parentElement.offsetWidth);
     }
-    get Height(){
-        //return this.cvs.Height;
-        return 0;
-    }
+  
+    
 
     Draw(){
-
         this.ctx.beginPath();
-        this.ctx.rect(0,0,30,10);
-        this.ctx.stroke();
-
-        this.ctx.beginPath();
-        this.ctx.rect(0,0,30,10);
+        this.ctx.rect(30,30,100,50);
         this.ctx.stroke();
     }
 
+
+    click(){
+        //alert('click');
+        this.Width = this.Width - 10; 
+        this.Draw();
+    }
 
 
     
